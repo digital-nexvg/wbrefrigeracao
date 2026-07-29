@@ -1,10 +1,10 @@
 :root {
-  --gold:    #F5C842;
+  --gold:    #3A82B8;
   --gold-lt: #FFE07A;
   --blue:    #5BC8F5;
   --blue-dk: #3A9FD8;
-  --dark:    #0B44B7;
-  --dark-2:  #062d99;
+  --dark:    #090D18;
+  --dark-2:  #0F1525;
   --dark-3:  #172035;
   --dark-4:  #1F2D47;
   --text:    #E4EAF4;
@@ -29,7 +29,8 @@ body {
   width:auto;
   object-fit:contain;
   display:block;
-  border-radius:8px;
+  border-radius:10px;
+  
   animation:floatingLogo 4s ease-in-out infinite;
 
   filter:
@@ -437,6 +438,17 @@ nav.scrolled { box-shadow:0 4px 32px rgba(0,0,0,0.6); }
   backdrop-filter:blur(8px);
 }
 .arrow-btn:hover { border-color:var(--gold); color:var(--gold); background:rgba(245,200,66,.1); }
+
+/* ═══════════════════
+   PROOF STRIP
+   ═══════════════════ */
+
+.proof-strip { padding: 30px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
+.proof-track { display: flex; align-items: center; gap: 45px; animation: marquee 22s linear infinite; white-space: nowrap; width: max-content; }
+.proof-strip .proof-item { font-family: var(--ff-serif); font-size: 1.05rem; font-weight: 300; font-style: italic; color: var(--muted); letter-spacing: .04em; flex-shrink: 0; flex-direction: row; }
+.proof-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cyan-dk); flex-shrink: 0; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
 
 /* ──────────────────────────────────────────
    SECTION COMMONS
